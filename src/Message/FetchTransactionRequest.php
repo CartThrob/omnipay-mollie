@@ -11,7 +11,7 @@ class FetchTransactionRequest extends AbstractRequest
 {
     public function getData()
     {
-        $this->validate('apiKey', 'transactionReference');
+        $this->validate('transactionReference');
 
         $data = array();
         $data['id'] = $this->getTransactionReference();
