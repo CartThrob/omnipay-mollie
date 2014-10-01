@@ -21,7 +21,8 @@ class PurchaseRequest extends AbstractRequest
 
     public function getData()
     {
-        $this->validate('apiKey', 'amount', 'description', 'returnUrl');
+        $apiStr = $this->getTestMode() ? 'testApiKey' : 'apiKey';
+        $this->validate($apiStr, 'amount', 'description', 'returnUrl');
 
         $data = array();
         $data['amount'] = $this->getAmount();
