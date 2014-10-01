@@ -13,8 +13,6 @@ class CompletePurchaseRequest extends FetchTransactionRequest
 {
     public function getData()
     {
-        $this->validate('apiKey');
-
         $data = array();
         $data['id'] = $this->getTransactionReference();
 
