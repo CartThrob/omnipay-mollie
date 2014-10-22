@@ -14,7 +14,8 @@ class FetchIssuersRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('apiKey');
+        $apiStr = $this->getTestMode() ? 'testApiKey' : 'apiKey';
+        $this->validate($apiStr);
     }
 
     public function sendData($data)

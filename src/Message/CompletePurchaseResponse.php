@@ -11,4 +11,6 @@ class CompletePurchaseResponse extends FetchTransactionResponse
     {
         return parent::isSuccessful() && $this->isPaid();
     }
+
+
 }
